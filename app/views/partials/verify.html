@@ -1,0 +1,35 @@
+<div class="container">
+
+    <div class="col-md-8 col-md-offset-2 row">
+        <h1 class="login-title">You're almost ready! We just need to check if you are {{ currentUser.username }}</h1>
+        <div class="signup-well">
+            <form class="form" name="form" ng-submit="register(form)" novalidate>
+                <div class="form-group"
+                     ng-class="{'has-warning': form.password.$dirty,
+                                'has-success': form.password.$valid && form.password.$dirty && !form.password.$error.mongoose,
+                                'has-error': form.password.$invalid && form.password.$dirty || form.password.$error.mongoose
+                                }">
+                    <label for="password">We just sent an e-mail to you with a verification code. Click the link or paste in code to the form below.</label>
+                    <input class="form-control"
+                           placeholder="Enter verification code"
+                           type="text"
+                           name="verification"
+                           ng-model="user.password"
+                           ng-minlength="5"
+                           required
+                           mongoose-error/>
+                    <p class="help-block"
+                       ng-show="(form.password.$error.minlength || form.password.$invalid)
+                                && form.password.$dirty
+                                && !form.password.$error.required">
+                        Verification must be at least 5 characters.
+                    </p>
+                </div>
+                <br />
+                <button class="btn btn-lg btn-primary grey-btn"
+                        type="submit"
+                        ng-disabled="form.$invalid">Create first box</button>
+            </form>
+        </div>
+    </div>
+</div>
