@@ -50,6 +50,10 @@ angular.module('angularPassportApp', [
         templateUrl: 'partials/dashboard-highchart.html',
         controller: 'DashboardCtrl'
       })
+      .when('/hipchat', {
+        templateUrl: 'partials/hipchat.html',
+        controller: 'MainCtrl'
+      })
       .when('/signup', {
         templateUrl: 'partials/signup.html',
         controller: 'SignupCtrl'
