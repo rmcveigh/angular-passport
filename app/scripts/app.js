@@ -14,25 +14,41 @@ angular.module('angularPassportApp', [
         templateUrl: 'partials/main.html',
         controller: 'MainCtrl'
       })
-      .when('/blogs', {
-        templateUrl: 'partials/blogs/list.html',
-        controller: 'BlogsCtrl'
-      })
-      .when('/blogs/create', {
-        templateUrl: 'partials/blogs/create.html',
-        controller: 'BlogsCtrl'
-      })
-      .when('/blogs/:blogId/edit', {
-        templateUrl: 'partials/blogs/edit.html',
-        controller: 'BlogsCtrl'
-      })
-      .when('/blogs/:blogId', {
-        templateUrl: 'partials/blogs/view.html',
-        controller: 'BlogsCtrl'
+      // .when('/blogs', {
+      //   templateUrl: 'partials/blogs/list.html',
+      //   controller: 'BlogsCtrl'
+      // })
+      // .when('/blogs/create', {
+      //   templateUrl: 'partials/blogs/create.html',
+      //   controller: 'BlogsCtrl'
+      // })
+      // .when('/blogs/:blogId/edit', {
+      //   templateUrl: 'partials/blogs/edit.html',
+      //   controller: 'BlogsCtrl'
+      // })
+      // .when('/blogs/:blogId', {
+      //   templateUrl: 'partials/blogs/view.html',
+      //   controller: 'BlogsCtrl'
+      // })
+      .when('/build', {
+        templateUrl: 'partials/build/build.html',
+        controller: 'BuildCtrl'
       })
       .when('/login', {
         templateUrl: 'partials/login.html',
         controller: 'LoginCtrl'
+      })
+      .when('/verify', {
+        templateUrl: 'partials/verify.html',
+        controller: 'VerifyCtrl'
+      })
+      .when('/dashboard', {
+        templateUrl: 'partials/dashboard.html',
+        controller: 'DashboardCtrl'
+      })
+      .when('/dashboard-highchart', {
+        templateUrl: 'partials/dashboard-highchart.html',
+        controller: 'DashboardCtrl'
       })
       .when('/signup', {
         templateUrl: 'partials/signup.html',

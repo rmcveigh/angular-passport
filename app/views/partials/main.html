@@ -1,2 +1,11 @@
-<h2 ng-show="!currentUser">Welcome. Please log in.</h2>
+<h2 ng-show="!currentUser">Welcome. Please <a href="/login">log in</a>.</h2>
 <h2 ng-show="currentUser">Hello {{currentUser.username}}</h2>
+<div class="main-content" ng-show="currentUser">
+	<ul>
+		<li><h3><a style="color:#CCCCCC;" href="/login">Log in</a></h3></li>
+		<li><h3><a style="color:#CCCCCC;" href="/signup">Sign Up</a></h3></li>
+		<li><h3><a style="color:#CCCCCC;" href="/verify">Verify</a></h3></li>
+		<li><h3><a style="color:#CCCCCC;" href="/dashboard">Dashboard (d3.js)</a></h3></li>
+		<li><h3><a style="color:#CCCCCC;" href="/dashboard-highchart">Dashboard (highcharts.js)</a></h3></li>
+	</ul>
+</div>	
